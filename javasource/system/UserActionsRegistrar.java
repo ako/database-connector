@@ -122,6 +122,8 @@ public class UserActionsRegistrar implements EventHandler
 			component.actionRegistry().registerUserAction(communitycommons.actions.XSSSanitize.class);
 			component.actionRegistry().registerUserAction(communitycommons.actions.YearsBetween.class);
 			component.actionRegistry().registerUserAction(databaseconnector.actions.ExecuteQuery.class);
+			component.actionRegistry().registerUserAction(databaseconnector.actions.ExecuteQueryToJson.class);
+			component.actionRegistry().registerUserAction(databaseconnector.actions.ExecuteQueryToList.class);
 			component.actionRegistry().registerUserAction(databaseconnector.actions.ExecuteStatement.class);
 			component.actionRegistry().registerUserAction(databaseconnectortest.actions.CreateRedshiftCluster.class);
 			component.actionRegistry().registerUserAction(databaseconnectortest.actions.DeleteRedshiftCluster.class);

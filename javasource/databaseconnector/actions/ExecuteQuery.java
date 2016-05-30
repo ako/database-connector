@@ -15,6 +15,7 @@ import com.mendix.systemwideinterfaces.core.IContext;
 import com.mendix.systemwideinterfaces.core.IMendixObject;
 import com.mendix.webui.CustomJavaAction;
 import databaseconnector.impl.JdbcConnector;
+import java.util.List;
 
 /**
  * <p>
@@ -77,8 +78,8 @@ public class ExecuteQuery extends CustomJavaAction<java.util.List<IMendixObject>
 		this.resultObject = __resultObject == null ? null : databaseconnector.proxies.Row.initialize(getContext(), __resultObject);
 
 		// BEGIN USER CODE
-		String entityName = resultObject.getMendixObject().getMetaObject().getName();
-		return connector.executeQuery(this.jdbcUrl, this.userName, this.password, entityName, this.sql, this.getContext());
+        String entityName = resultObject.getMendixObject().getMetaObject().getName();
+        return connector.executeQuery(this.jdbcUrl, this.userName, this.password, entityName, this.sql, this.getContext());
 		// END USER CODE
 	}
 
@@ -92,8 +93,8 @@ public class ExecuteQuery extends CustomJavaAction<java.util.List<IMendixObject>
 	}
 
 	// BEGIN EXTRA CODE
-	private final ILogNode logNode = Core.getLogger(this.getClass().getName());
+    private final ILogNode logNode = Core.getLogger(this.getClass().getName());
 
-	private final JdbcConnector connector = new JdbcConnector(logNode);
+    private final JdbcConnector connector = new JdbcConnector(logNode);
 	// END EXTRA CODE
 }
